@@ -170,8 +170,8 @@ public class Simulator {
 			
 		case TIMEOUT:
 			// esci dalla lista d'attesa
-			attesa.remove(paz);
-			if(paz.getColore()==CodiceColore.OUT)
+			boolean eraPresente = attesa.remove(paz);
+			if(!eraPresente)
 				break;
 			
 			switch(paz.getColore()) {
