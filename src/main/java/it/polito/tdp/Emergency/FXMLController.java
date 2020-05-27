@@ -1,11 +1,14 @@
 package it.polito.tdp.Emergency;
 
 import java.net.URL;
+
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+
+//importato e pronto per i commenti con la videolezione associata
 
 public class FXMLController implements Initializable {
     
