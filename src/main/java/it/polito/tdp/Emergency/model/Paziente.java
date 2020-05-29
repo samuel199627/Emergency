@@ -18,6 +18,7 @@ public class Paziente implements Comparable<Paziente>{
 		OUT,
 	}
 	
+	//ci serve per determinare la posizione a parita' di codice colore nella sala di attesa
 	private LocalTime oraArrivo ;
 	private CodiceColore colore ;
 	/**
@@ -39,6 +40,9 @@ public class Paziente implements Comparable<Paziente>{
 	public void setColore(CodiceColore colore) {
 		this.colore = colore;
 	}
+	
+	//mi serve per avere l'ordinamento nella sala di attesa, la cui priorita' e' per 
+	//codice colore e a parita' e' per ora di arrivo
 	@Override
 	public int compareTo(Paziente other) {
 		if(this.colore==other.colore) {
@@ -55,6 +59,7 @@ public class Paziente implements Comparable<Paziente>{
 		
 		throw new RuntimeException("Comparator<Persona> failed") ;
 	}
+	
 	@Override
 	public String toString() {
 		return "Paziente [" + oraArrivo + ", " + colore + "]";
