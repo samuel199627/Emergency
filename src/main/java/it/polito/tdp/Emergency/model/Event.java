@@ -2,6 +2,7 @@ package it.polito.tdp.Emergency.model;
 
 import java.time.LocalTime;
 
+//l'evento e' quando mi muovo da uno stato ad un altro
 public class Event implements Comparable<Event>{
 	
 	//ecco i vari tipi di eventi che possono accadere (uno per ogni tipo di freccia 

@@ -45,11 +45,41 @@ public class TestSimulator {
 
 	public static void main(String[] args) {
 		Simulator sim = new Simulator() ;
+		//CON 2 STUDI ABBIAMO I SEGUENTI RISULTATI
+		/*
+		 	** STATISTICHE **
+			Studi medici: 2
+			Pazienti:     150
+			Dimessi:      38
+			Morti:        65
+			Abbandonano:  47
+		 */
 		sim.setNS(2);
+		//CON 4 STUDI ABBIAMO I SEGUENTI RISULTATI
+		/*
+		 	** STATISTICHE **
+			Studi medici: 4
+			Pazienti:     150
+			Dimessi:      75
+			Morti:        31
+			Abbandonano:  44
+		 */
+		//sim.setNS(4);
+		//CON 5 STUDI ABBIAMO I SEGUENTI RISULTATI
+		/*
+		 	** STATISTICHE **
+			Studi medici: 5
+			Pazienti:     150
+			Dimessi:      111
+			Morti:        0
+			Abbandonano:  39
+		*/
+		//sim.setNS(5);
 		sim.setT_ARRIVAL(Duration.ofMinutes(3));
 		sim.init();
 		sim.run();
 		
+		//ECCO I PARAMETRI DI FINE SIMULAZIONE CHE POSSIAMO ANDARE AD ESTRARRE DAL SIMULATORE
 		System.out.println("** STATISTICHE **") ;
 		System.out.format("Studi medici: %d\n", sim.getNS());
 		System.out.format("Pazienti:     %d\n", sim.getPazientiTot());
